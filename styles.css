@@ -1,0 +1,83 @@
+/* Basic styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(120deg, #f30b7f, #fad0c4);
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  h1, h2 {
+    font-size: 3rem;
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    transition: all 2s ease-in-out;
+  }
+  
+  /* Hide buttons initially */
+  .buttons button {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  /* Buttons Color */
+  #yes {
+    background-color: green;
+    color: white;
+  }
+  
+  #no {
+    background-color: red;
+    color: white;
+  }
+  
+  /* Hide Congratulations initially */
+  .congrats-message {
+    display: none; /* Initially hidden */
+    opacity: 0; /* Initially invisible */
+    transition: opacity 2s ease-in-out; /* Smooth fade-in */
+  }
+  
+  /* Ensure h2 and p elements inside congrats also fade in */
+  .congrats-message h3,
+  .congrats-message p {
+    opacity: 0; /* Initially invisible */
+    transition: opacity 2s ease-in-out; /* Smooth fade-in */
+  }
+  
+  /* Shock effect - Bounce Animation */
+  @keyframes shock {
+    0% {
+      transform: scale(1) translateY(0);
+    }
+    25% {
+      transform: scale(1.1) translateY(-10px);
+    }
+    50% {
+      transform: scale(0.9) translateY(10px);
+    }
+    75% {
+      transform: scale(1.05) translateY(-5px);
+    }
+    100% {
+      transform: scale(1) translateY(0);
+    }
+  }
+  
+  .shock {
+    animation: shock 0.5s ease-in-out;
+  }
+  
